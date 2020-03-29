@@ -1,0 +1,19 @@
+a:5:{i:0;s:471:"<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet">
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
+	<title>";s:5:"title";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1:" ";s:4:"file";s:53:"D:\Projects\Final_project\app/views\layouts\base.volt";s:4:"line";i:5;}}i:1;s:154:"</title>
+</head>
+<body>
+<div class="intro">
+	<div id="img_buka">
+		<img src="assets/af125637-fa7d-4a88-80f6-35c32e03b011.v1.png">
+	</div>
+</div>
+	";s:7:"content";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1:" ";s:4:"file";s:53:"D:\Projects\Final_project\app/views\layouts\base.volt";s:4:"line";i:13;}}i:2;s:18:"
+</body>
+</html>";}

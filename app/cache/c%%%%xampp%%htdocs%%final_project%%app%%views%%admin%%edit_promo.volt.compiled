@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script src="<?= $this->url->get('js/script.js') ?>"></script>
+
+	<title>List Promo ISMANIA Bakery</title>
+</head>
+<body class="introduction">
+	
+<?php if ($this->session->has('admin')) { ?>
+	
+<?php } else { ?>
+    <script type="text/javascript">
+        alert('You are not an admin');
+        document.location.href="<?= $this->url->get('Home') ?>";
+    </script>
+<?php } ?>
+<body background="assets/bg_2.png">
+    <div class="pill-nav">
+		<a href="<?= $this->url->get('Admin') ?>">Admin Page</a>
+	</div>
+	<h1 class="header">List Promo</h1>
+    <center>
+        <table>
+            <tr>
+                <td>Promo</td>
+                <td>Action</td>
+            </tr>
+            <?php foreach ($promo as $promos) { ?>
+            <tr>
+                <td><img src="<?= $promos->photo ?>" width=200px></td>
+                <td><form action="<?= $this->url->get('delete_promo') ?>" method="get">
+                    <input type="hidden" name="id_promo" value=<?= $promos->id ?>>
+                    <input type="submit" class="btn" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            <?php } ?>
+        </table>
+        <br>
+        <form action="<?= $this->url->get('edit_promo') ?>" class="member" method="post" enctype="multipart/form-data">
+        <div class="input">
+            <label><center>Add Promo</center><label><br>
+        </div>
+        <div class="input">
+			<input type="file" name="photo_promo" id="photo_promo">
+        </div>
+            <input type="submit" class="btn" value="Add Promo">
+        </form>
+    </center>
+</body>
+
+</body>
+</html>

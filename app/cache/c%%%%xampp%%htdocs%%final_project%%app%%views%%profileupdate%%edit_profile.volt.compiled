@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script src="<?= $this->url->get('js/script.js') ?>"></script>
+
+	<title>Edit Profile ISMANIA Bakery</title>
+</head>
+<body class="introduction">
+	
+<?php if ($this->session->has('auth')) { ?>
+	
+<?php } else { ?>
+    <?php if ($this->session->has('admin')) { ?>
+       <script type="text/javascript">
+            alert('You are an admin');
+            document.location.href="<?= $this->url->get('Home') ?>";
+        </script>
+    <?php } else { ?>
+        <script type="text/javascript">
+            alert('You have not log in, please log in first');
+            document.location.href="<?= $this->url->get('login') ?>";
+        </script>
+    <?php } ?>
+<?php } ?>
+<body background="assets/bg_info.jpg">
+	<h1 class="header">Edit Profile</h1>
+	<form class="member" action="<?= $this->url->get('edit_profile') ?>" method="post">
+        <div class="input">
+            <label for="Member_name">Name</label>
+            <input type="username" name="Member_name" value="<?= $user->Member_name ?>">
+        </div>
+        <div class="input">
+            <label for="Member_birthdate">Birth date</label>
+            <input type="date" name="Member_birthdate" id="Member_birthdate" value="<?= $user->Member_birthdate ?>">
+        </div>
+        <div class="input">
+            <label for="Member_gender">Gender</label>
+            <input type="text" name="Member_gender" id="Member_gender" value="<?= $user->Member_gender ?>">
+        </div>
+        <div class="input">
+            <label for="Member_address">Address</label>
+            <input type="text" name="Member_address" value="<?= $user->Member_address ?>">
+        </div>
+        <div class="input">
+            <label for="Member_occupation">Occupation</label>
+            <input type="text" name="Member_occupation" value="<?= $user->Member_occupation ?>">
+        </div>
+        <div class="input">
+            <label for="Member_telephone">Telephone</label>
+            <input type="number" name="Member_telephone" value="<?= $user->Member_telephone ?>">
+        </div>
+        <div class="input">
+            <input type="submit" class="btn" value="Save">
+        </div>
+        <br><br><a href="<?= $this->url->get('Home') ?>" id="move">Back to Home</a>
+	</form>
+</body>
+
+</body>
+</html>

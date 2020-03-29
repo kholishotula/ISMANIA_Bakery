@@ -1,0 +1,15 @@
+a:5:{i:0;s:427:"<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script src="<?= $this->url->get('js/script.js') ?>"></script>
+
+	<title>";s:5:"title";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1:" ";s:4:"file";s:56:"C:\xampp\htdocs\Final_project\app/views\layout\base.volt";s:4:"line";i:5;}}i:1;s:49:"</title>
+</head>
+<body class="introduction">
+	";s:7:"content";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1:" ";s:4:"file";s:56:"C:\xampp\htdocs\Final_project\app/views\layout\base.volt";s:4:"line";i:8;}}i:2;s:18:"
+</body>
+</html>";}

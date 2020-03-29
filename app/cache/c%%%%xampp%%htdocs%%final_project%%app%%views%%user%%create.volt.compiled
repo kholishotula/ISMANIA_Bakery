@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script src="<?= $this->url->get('js/script.js') ?>"></script>
+
+	<title>Sign Up ISMANIA Bakery</title>
+</head>
+<body class="introduction">
+	
+<?php if ($this->session->has('auth')) { ?>
+	<script type="text/javascript">
+        alert('You have logged in');
+        document.location.href="<?= $this->url->get('Home') ?>";
+    </script>
+<?php } else { ?>
+    <?php if ($this->session->has('admin')) { ?>
+       	<script type="text/javascript">
+        	alert('You have logged in');
+        	document.location.href="<?= $this->url->get('Home') ?>";
+    	</script>
+    <?php } ?>
+<?php } ?>
+<body background="assets/bg_form.jpg">
+	<h1 class="header">Membership Registration</h1>
+	<form class="member" action="<?= $this->url->get('register') ?>" method="post" enctype="multipart/form-data">
+	<div class="input">
+		<label for="Member_KTP">KTP Number</label>
+		<p><?= $messages['Member_KTP'] ?></p>
+		<input type="number" name="Member_KTP" id="Member_KTP">
+	</div>
+	<div class="input">
+		<label for="Member_name">Name</label>
+		<p><?= $messages['Member_name'] ?></p>
+		<input type="username" name="Member_name" id="Member_name">
+	</div>
+	<div class="input">
+		<label for="Member_birthdate">Birth date</label>
+		<p><?= $messages['Member_birthdate'] ?></p>
+		<input type="date" name="Member_birthdate" id="Member_birthdate">
+	</div>
+	<div class="input_gender">
+		<label for="Member_gender">Gender</label><br>
+		<p><?= $messages['Member_gender'] ?></p>
+		<input type="radio" name="Member_gender" id="Member_gender" value="Male"> Male<br>
+		<input type="radio" name="Member_gender" id="Member_gender" value="Female"> Female<br>
+	</div>
+	<div class="input">
+		<label for="Member_address">Address</label>
+		<p><?= $messages['Member_address'] ?></p>
+		<input type="text" name="Member_address" id="Member_address">
+	</div>
+	<div class="input">
+		<label for="Member_occupation">Occupation</label>
+		<p><?= $messages['Member_occupation'] ?></p>
+		<input type="text" name="Member_occupation" id="Member_occupation">
+	</div>
+	<div class="input">
+		<label for="Member_telephone">Telephone</label>
+		<p><?= $messages['Member_telephone'] ?></p>
+		<input type="number" name="Member_telephone" id="Member_telephone">
+	</div>
+	<div class="input">
+		<label for="Member_password">Add password</label>
+		<p><?= $messages['Member_password'] ?></p>
+		<input type="password" name="Member_password" id="Member_password">
+	</div>
+	<div class="input">
+		<label for="Member_photo">Add photo</label>
+		<p><?= $messages['Member_photo'] ?></p>
+		<input type="file" name="Member_photo" id="Member_photo">
+	</div>
+	<div class="input">
+		<input type="submit" class="btn" value="Register">
+	</div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.intro {
+	background-image: url("../assets/bg_awal.jpg");
+	min-height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#img_buka {
+	margin-top: -150px;
+	width: 400px;
+	height: 400px;
+}
+
+#text_buka {
+	top: 65%;
+	left: 25%;
+	right: 25%;
+	color: white;
+	font-size: 20px;
+	font-family: "Lucida Grande", Lucida Sans Unicode, Lucida Sans, Geneva, Verdana, sans-serif;
+	position: absolute;
+	text-align: center;
+}
+
+.nav {
+	overflow: hidden;
+	background-color: #ffe6ff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.nav a {
+	float: left;
+	color: #000000;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 18px;
+}
+
+.nav a.active {
+	background-color: #1a001a;
+	color: #ffffff;
+}
+
+.nav a.data {
+	float: right;
+}
+
+.nav a:hover {
+	background-color: #ffb3ff;
+	color: #ffffff;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 580px) {
+	.nav a {
+	  float: none;
+	  display: block;
+	}
+}
+
+.plus {
+	padding: 10%;
+	background-image: url("../assets/bg_2.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #000000;
+	text-align: center;
+}
+
+.kiri {
+	width: 30%;
+	height: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin: 20px;
+	text-align: center;
+	font-family: arial;
+	display: inline-block;
+}
+
+.kiri:hover {
+	transform: scale(1.2);
+}
+
+.nama {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: 28px;
+}
+
+.produk {
+	background-color: #cccccc;
+	padding: 7%;
+}
+
+#text_produk {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 40px;
+	text-align: center;
+}
+
+#tosee {
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 22px;
+	text-decoration: none;
+	color: #000000;
+}
+
+#poptext {
+	display: none;
+	width: 200px;
+	background-color: #ffe6ff;
+	color: #000000;
+	text-align: center;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+	left: 55%;
+	margin-top: 3px;
+}
+
+.iniproduk {
+	margin: 20px;
+	font-size: 20px;
+}
+
+#cake, #bread, #cookies {
+	display: none;
+}
+
+.images {
+	height: 70%;
+	width: 70%;
+}
+
+* {box-sizing: content-box;
+	border-radius: 5px;
+}
+
+#open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #ddd;
+}
+
+.berita {
+	background-color: #ffdab3;
+	text-align: center;
+	padding: 7%;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 24px;
+}
+
+.promo {
+	background-color: #cce0ff;
+	padding: 7%;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 24px;
+	text-align: center;
+}
+
+#promo1 {
+	height: 250px;
+	transform: rotate(-20deg);
+	display: inline-block;
+	margin: 50px;
+}
+
+#promo2 {
+	height: 250px;
+	display: inline-block;
+	margin: 50px;
+}
+
+#promo3 {
+	height: 250px;
+	transform: rotate(20deg);
+	display: inline-block;
+	margin: 50px;
+}
+
+#imgoutlet:hover {
+	animation: shake 0.7s;
+ 	animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#Contact {
+	text-align: center;
+	background-image: url("../assets/outlet1baru.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 7% 7% 2% 7%;
+	color: #ffffff;
+	font-size: 24px;
+}
+
+#text_kontak {
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	font-size: 36px;
+}
+
+#hub, #last {
+	margin: 20px;
+	width: 45%;
+	display: inline-block;
+}

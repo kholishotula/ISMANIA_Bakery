@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet">
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script type="text/javascript" src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script type="text/javascript" src="<?= $this->url->get('js/script.js') ?>"></script>
+	<title>ISMANIA Cake and Bakery</title>
+</head>
+<body>
+<div class="intro">
+	<div id="img_buka">
+		<img src="assets/af125637-fa7d-4a88-80f6-35c32e03b011.v1.png">
+	</div>
+</div>
+	
+<body>
+    <div class="nav">
+		<a href="<?= $this->url->get('Home') ?>">Home</a>
+		<a href="<?= $this->url->get('Product') ?>">Product</a>
+		<a href="<?= $this->url->get('Promo') ?>">Promo</a>
+		<a href="<?= $this->url->get('News') ?>">News</a>
+		<a class="active" href="<?= $this->url->get('Outlets') ?>">Outlets</a>
+		<a href="#Contact">Contact</a>
+		<?php if ($this->session->has('admin')) { ?>
+			<a class="data" href="<?= $this->url->get('Admin') ?>">Admin</a>
+		<?php } ?>
+		<?php if ($this->session->has('auth')) { ?>		
+			<a class="data" href="<?= $this->url->get('Profile') ?>">My Profile</a>
+			<a class="data" href="<?= $this->url->get('MyCart') ?>"><img src="assets/mycart.png" style="height: 16px, width: 16px"></a>
+		<?php } else { ?>
+			<a class="data" href="<?= $this->url->get('login') ?>">Log In</a>
+		<?php } ?>
+	</div>
+	<div id="text_buka">
+		ISMANIA Bakery is a home bakery which provides many kind of cakes and cookies with unique flavors and good price. So everybody can taste our products.
+	</div>
+
+    <div class="produk">
+		<div id="text_produk">
+			OUR OUTLET<br>
+			<img id="imgoutlet" src="assets/outlet2.jpg" style="margin-top: 20px">
+			<div id="tosee">
+				Jl KH Kholil 23 Gresik
+			</div>
+		</div>
+	</div>
+
+   	<div id="Contact">
+    	<div id="text_kontak">
+	    	<strong>Contact Us !</strong>
+	    </div>
+		<div id="last">
+			<img src="assets/sosmed.png" style="height: 150px">
+			<br>fb : ISMANIA Cake and Bakery
+			<br>ig : @ismania.bakery
+			<br>wa : 088888888888
+		</div>
+		<div id="hub">
+			<a href="<?= $this->url->get('Outlets') ?>">
+				<img src="assets/outlet.png" style="height: 90px">
+				<h3>Our Outlet</h3>
+				Jl KH Kholil 23 Gresik
+			</a>
+		</div>
+		<img src="assets/tagline.png" style="width: 100%">
+	</div>
+</body>
+
+</body>
+</html>

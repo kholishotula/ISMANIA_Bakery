@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script src="<?= $this->url->get('js/script.js') ?>"></script>
+
+	<title>Log In ISMANIA Bakery</title>
+</head>
+<body class="introduction">
+	
+<?php if ($this->session->has('auth')) { ?>
+	<script type="text/javascript">
+        alert('You have logged in');
+        document.location.href="<?= $this->url->get('Home') ?>";
+    </script>
+<?php } else { ?>
+    <?php if ($this->session->has('admin')) { ?>
+       	<script type="text/javascript">
+        	alert('You have logged in');
+        	document.location.href="<?= $this->url->get('Home') ?>";
+    	</script>
+    <?php } ?>
+<?php } ?>
+<body background="assets/bg_login.png">
+	<h1 class="header">Membership Log In</h1>
+	<form action="<?= $this->url->get('login') ?>" class="member" method="post">
+		<div class="input">
+			<label for="Member_KTP">Member KTP</label>
+			<input type="number" name="Member_KTP" value="<?= $remember_ktp ?>">
+		</div>
+		<div class="input">
+			<label for="Member_password">Password</label>
+			<input type="password" name="Member_password" value="<?= $remember_password ?>">
+		</div>
+		<input type="checkbox" name="remember" value="1">Remember me
+		<div class="input">
+			<input type="submit" class="btn" value="Log In">
+		</div>
+	</form>
+	<div class="kata">
+		<p>Haven't join as a member? Sign up for free!</p>
+		<a href="<?= $this->url->get('register') ?>" id="move">Click here</a>
+	</div>
+</body>
+
+</body>
+</html>

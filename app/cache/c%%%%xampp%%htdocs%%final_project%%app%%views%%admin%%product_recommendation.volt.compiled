@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="<?= $this->url->get('css/style1.css') ?>" rel="stylesheet">
+<link href="<?= $this->url->get('css/style.css') ?>" rel="stylesheet">
+<link rel="shortcut icon" href="<?= $this->url->get('assets/favicon.ico') ?>" type="image/x-icon">
+<script src="<?= $this->url->get('js/jquery-3.3.1.min.js') ?>"></script>
+<script src="<?= $this->url->get('js/script.js') ?>"></script>
+
+	<title>Product Recommendation ISMANIA Bakery</title>
+</head>
+<body class="introduction">
+	
+<?php if ($this->session->has('admin')) { ?>
+	
+<?php } else { ?>
+    <script type="text/javascript">
+        alert('You are not an admin');
+        document.location.href="<?= $this->url->get('Home') ?>";
+    </script>
+<?php } ?>
+<body background="assets/bg_prodrecom.jpg">
+    <div class="pill-nav">
+		<a href="<?= $this->url->get('Admin') ?>">Admin Page</a>
+	</div>
+	<h1 class="header" style="margin-top: 120px;">Product Recommendation</h1>
+    <div id="prodrecom">
+        <?php foreach ($product as $recom) { ?>
+        <li><?php if ($recom->photo != null) { ?><img src="data:image/png;base64,<?= $recom->photo ?>" width=200px><br><?php } ?>
+            <?= $recom->product ?>
+            <?php if ($recom->desc != null) { ?><br><?= $recom->desc ?><?php } ?>
+        </li>
+        <?php } ?>
+    </div>
+    <center><a href="<?= $this->url->get('Home') ?>" class="btn" style="top: 93%; left: 47%; position: absolute">Back to Home</a><center>
+</body>
+
+</body>
+</html>
